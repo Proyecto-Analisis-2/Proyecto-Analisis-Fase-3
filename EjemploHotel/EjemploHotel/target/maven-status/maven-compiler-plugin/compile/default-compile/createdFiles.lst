@@ -1,0 +1,11 @@
+umg\conf\NewHibernateUtil.class
+umg\pojos\Cliente.class
+umg\pojos\Checkin.class
+umg\test\pruebas.class
+umg\pojos\Checkout.class
+umg\pojos\Habitacion.class
+umg\pojos\Usuario.class
+umg\pojos\Reserva.class
+umg\beans\Login.class
+umg\pojos\Hotel.class
+umg\spring\UsuariosControl.class

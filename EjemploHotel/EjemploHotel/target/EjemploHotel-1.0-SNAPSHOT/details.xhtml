@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	  xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Hotel Reserva</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link href="resources/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- Custom Theme files -->
+	<link href="resources/css/style.css" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="resources/css/jquery-ui.css" />
+	<h:outputScript library="js" name="jquery-1.11.1.min.js"/>
+	<h:outputScript library="js" name="bootstrap.js"/>
+	<h:outputScript library="js" name="jquery-ui.js"/>
+	<h:outputScript library="js" name="classie.js"/>
+	<h:outputScript library="js" name="uisearch.js"/>
+</h:head>
+<h:body>
+	<div class="banner1">
+		<ui:include src="header.xhtml"/>
+	</div>
+	<!-- details -->
+	<div class="details">
+		<div class="container">
+			<div class="col-md-7 details-left">
+				<img src="resources/images/16.jpg" class="img-responsive" alt=""/>
+			</div>
+			<div class="col-md-5 details-right">
+				<span><strong>Q. 250</strong> Q. 300 por Persona</span>
+				<div class="new-collections-grid1-right">
+					<div class="rating">
+						<div class="rating-left">
+							<img src="resources/images/rat2.png" alt=" " class="img-responsive"/>
+						</div>
+						<div class="rating-left">
+							<img src="resources/images/rat2.png" alt=" " class="img-responsive"/>
+						</div>
+						<div class="rating-left">
+							<img src="resources/images/rat2.png" alt=" " class="img-responsive"/>
+						</div>
+						<div class="rating-left">
+							<img src="resources/images/rat2.png" alt=" " class="img-responsive"/>
+						</div>
+						<div class="rating-left">
+							<img src="resources/images/rat1.png" alt=" " class="img-responsive"/>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<ul>
+					<li>Reserve el servicio al mejor precio</li>
+					<li>Pago seguro con tarjeta de crédito</li>
+					<li>Sin cuota de reserva</li>
+				</ul>
+				<p> BIENVENIDO</p>
+
+					<h:form>
+						<h:commandButton type="submit" value="RESERVAR HABITACION" action="RESERVAR HABITACION"/>
+					</h:form>
+
+			</div>
+
+			<div class="clearfix"> </div>
+
+			
+
+
+		 </div>
+	</div>
+<!-- details -->
+	<ui:include src="footer.xhtml"/>
+</h:body>
+</html>

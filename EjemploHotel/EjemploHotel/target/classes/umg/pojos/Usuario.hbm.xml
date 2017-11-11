@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 09-nov-2017 21:45:52 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="umg.pojos.Usuario" table="USUARIO" schema="HOTELDBA" optimistic-lock="version">
+        <id name="idusuario" type="big_decimal">
+            <column name="IDUSUARIO" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="usuario" type="string">
+            <column name="USUARIO" length="50" />
+        </property>
+        <property name="contrasena" type="string">
+            <column name="CONTRASENA" length="100" />
+        </property>
+        <property name="nombrecompleto" type="string">
+            <column name="NOMBRECOMPLETO" length="15" />
+        </property>
+        <property name="correoelectronico" type="string">
+            <column name="CORREOELECTRONICO" length="50" />
+        </property>
+        <property name="puesto" type="string">
+            <column name="PUESTO" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

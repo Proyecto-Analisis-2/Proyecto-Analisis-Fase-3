@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 09-nov-2017 21:45:52 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="umg.pojos.Checkin" table="CHECKIN" schema="HOTELDBA" optimistic-lock="version">
+        <id name="idcheckin" type="big_decimal">
+            <column name="IDCHECKIN" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="cliente" class="umg.pojos.Cliente" fetch="select">
+            <column name="IDCLIENTE" precision="22" scale="0" />
+        </many-to-one>
+        <property name="fecha" type="date">
+            <column name="FECHA" length="7" />
+        </property>
+        <property name="fechasalida" type="date">
+            <column name="FECHASALIDA" length="7" />
+        </property>
+        <set name="reservas" table="RESERVA" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="IDCHECKIN" precision="22" scale="0" />
+            </key>
+            <one-to-many class="umg.pojos.Reserva" />
+        </set>
+    </class>
+</hibernate-mapping>

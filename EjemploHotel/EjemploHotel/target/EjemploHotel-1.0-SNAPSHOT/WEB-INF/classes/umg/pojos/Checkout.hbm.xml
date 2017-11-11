@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 09-nov-2017 21:45:52 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="umg.pojos.Checkout" table="CHECKOUT" schema="HOTELDBA" optimistic-lock="version">
+        <id name="idcheckout" type="big_decimal">
+            <column name="IDCHECKOUT" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="reserva" class="umg.pojos.Reserva" fetch="select">
+            <column name="IDRESERVA" precision="22" scale="0" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

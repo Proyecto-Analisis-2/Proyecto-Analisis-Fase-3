@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	  xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Hotel Reserva</title>
+	<link href="resources/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- Custom Theme files -->
+	<link href="resources/css/style.css" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="resources/css/jquery-ui.css" />
+	<h:outputScript library="js" name="jquery-1.11.1.min.js"/>
+	<h:outputScript library="js" name="bootstrap.js"/>
+	<h:outputScript library="js" name="jquery-ui.js"/>
+	<h:outputScript library="js" name="classie.js"/>
+	<h:outputScript library="js" name="uisearch.js"/>
+
+</h:head>
+<h:body>
+	<div class="banner1">
+		<ui:include src="header.xhtml"/>
+	</div>
+<!-- registration -->
+	<div class="reg-form">
+		<div class="container">
+			<div class="reg">
+				<h3>INFORMACION PERSONAL</h3>
+				<p>Bienvenido, porvavor ingrese los siguentes datos para continuar.</p>
+				<h:form>
+					<ul>
+						<li class="text-info">Primer Nombre</li>
+                                                <li><h:inputText> </h:inputText></li>
+					</ul>
+					<ul>
+						<li class="text-info">Segundo Nombre</li>
+						<li><h:inputText> </h:inputText></li>
+					</ul>
+					<ul>
+						<li class="text-info">Genero</li>
+						<li>masculino :<input type="radio" name="gender" value="Male"/>
+							Femenino :<input type="radio" name="gender" value="Female"/>
+						</li>
+					</ul>
+					<ul>
+						<li class="text-info">Email</li>
+						<li><h:inputText> </h:inputText></li>
+					</ul>
+					<ul>
+						<li class="text-info">Pais</li>
+						<li>
+							<select>
+								<option value="">Seleccionar</option>
+								<option value="a">Guatemala</option>
+								<option value="a">Honduras</option>
+								<option value="a">Panama</option>
+								
+							</select>
+						</li>
+					</ul>
+					<ul>
+						<li class="text-info">Direccion</li>
+						<li><h:inputText> </h:inputText></li>
+					</ul>
+					<ul>
+						<li class="text-info">Estado</li>
+						<li>Casado <input type="radio" name="gender" value="married"/>
+							soltero <input type="radio" name="gender" value="unmarried"/></li>
+					</ul>
+					<ul>
+						<li class="text-info">No. Telefono</li>
+						<li><li><h:inputText> </h:inputText></li></li>
+					</ul>
+					<ul>
+						<li class="text-info">Contraseña</li>
+						<li><h:inputText> </h:inputText></li>
+					</ul>
+					<ul>
+						<li class="text-info">Confirmar Contraseña</li>
+						<li><h:inputText> </h:inputText></li>
+					</ul>
+				  <h:commandButton type="submit" value="Registrar" action="#"/>
+				</h:form>
+				<div class="clearfix"> </div>
+		   </div>
+		 </div>
+	</div>
+<!-- registration -->
+<ui:include src="footer.xhtml"/>
+</h:body>
+</html>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	  xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Hotel Reserva</title>
+	<link href="resources/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- Custom Theme files -->
+	<link href="resources/css/style.css" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="resources/css/jquery-ui.css" />
+	<h:outputScript library="js" name="jquery-1.11.1.min.js"/>
+	<h:outputScript library="js" name="bootstrap.js"/>
+	<h:outputScript library="js" name="jquery-ui.js"/>
+	<h:outputScript library="js" name="classie.js"/>
+	<h:outputScript library="js" name="uisearch.js"/>
+</h:head>
+<h:body>
+<!-- banner -->
+	<div class="banner">
+		<ui:include src="header.xhtml" />
+
+		<div class="banner-info">
+			<div class="container">
+				<div class="details-1">
+					<div class="col-md-10 dropdown-buttons">   
+						<div class="col-md-3 dropdown-button">           			
+							<div class="input-group">
+								<h:inputText class="form-control has-dark-background"  id="slider-name" p:placeholder="Name"  required="true"/>
+							</div>
+						</div>
+						<!---strat-date-piker-->
+							  <script type="text/javascript" language="JavaScript">
+									  $(function() {
+										$( ".datepicker,.datepicker1" ).datepicker();
+									  });
+							  </script>
+						<!---/End-date-piker-->
+
+						<div class="col-md-3 dropdown-button">           			
+							<div class="book_date">
+								<h:form id="fd">
+									<h:inputText styleClass="date datepicker"  onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Check In';}"/>
+								</h:form>
+							</div>		
+						</div>
+					  <div class="col-md-3 dropdown-button">           			
+							<div class="book_date">
+								<h:form id="fd2">
+									<h:inputText styleClass="date1 datepicker1"  value="Check Out" onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Check Out';}"/>
+								</h:form>
+							</div>		
+						</div>
+						<div class="col-md-3 dropdown-button">
+						  <div class="section_1">
+							 <select id="country" class="frm-field required">
+								 <option value="">Seleccione</option>
+								 <option value="a">Doble</option>
+								 <option value="c">Simple</option>
+								 <option value="e">suit</option>
+								 <option value="g">Guest</option>
+							 </select>
+						  </div>
+						</div>
+						<div class="clearfix"> </div>
+					</div> 
+					<div class="col-md-2 submit_button"> 
+						<form action="details.xhtml">
+							<input type="submit" value="Search"/>
+						</form>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>		
+	<!-- banner -->
+	<!-- hod -->
+	<div class="hod">
+		<div class="container">
+			<div class="col-md-6 hod-left">
+				<img src="resources/images/14.jpg" class="img-responsive" alt=""/>
+			</div>
+			<div class="col-md-6 hod-right">
+				<h2>Oferta</h2>
+				<p> oferta por temporada</p>
+				<p>habitacion Simple Q. 50</p>
+				<a class="hvr-shutter-in-horizontal" href="details.xhtml">Reservar</a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- hod -->
+	<!-- tels -->
+	<div class="tels">
+		<div class="container">
+			<div class="col-md-4 tels-left">
+				<h4>Simple <span>Q: 110</span></h4>
+				<img src="resources/images/4.jpg" class="img-responsive" alt=""/>
+				<p>habitacion sencilla</p>
+				<a class="hvr-shutter-in-horizontal" href="details.xhtml">Reservar</a>
+			</div>
+			<div class="col-md-4 tels-left">
+				<h4>Doble <span>Q. 150</span></h4>
+				<img src="resources/images/9.jpg" class="img-responsive" alt=""/>
+				<p>Habitacion Intermedia</p>
+				<a class="hvr-shutter-in-horizontal" href="details.xhtml">Reservar</a>
+			</div>
+			<div class="col-md-4 tels-left">
+				<h4>Suit <span>Q. 200</span></h4>
+				<img src="resources/images/3.jpg" class="img-responsive" alt=""/>
+				<p>la mejor habitacion que tenemos en nuestro hotel</p>
+				<a class="hvr-shutter-in-horizontal" href="details.xhtml">Reservar</a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	
+	<ui:include src="footer.xhtml"/>
+
+</h:body>
+</html>

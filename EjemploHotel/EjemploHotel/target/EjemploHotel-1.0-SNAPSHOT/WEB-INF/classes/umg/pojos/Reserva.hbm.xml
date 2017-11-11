@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 09-nov-2017 21:45:52 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="umg.pojos.Reserva" table="RESERVA" schema="HOTELDBA" optimistic-lock="version">
+        <id name="idreserva" type="big_decimal">
+            <column name="IDRESERVA" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="cliente" class="umg.pojos.Cliente" fetch="select">
+            <column name="IDCLIENTE" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="habitacion" class="umg.pojos.Habitacion" fetch="select">
+            <column name="IDHABITACION" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="checkin" class="umg.pojos.Checkin" fetch="select">
+            <column name="IDCHECKIN" precision="22" scale="0" />
+        </many-to-one>
+        <property name="estado" type="string">
+            <column name="ESTADO" length="50" />
+        </property>
+        <property name="fechareserva" type="date">
+            <column name="FECHARESERVA" length="7" />
+        </property>
+        <property name="observacion" type="string">
+            <column name="OBSERVACION" length="100" />
+        </property>
+        <set name="checkouts" table="CHECKOUT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="IDRESERVA" precision="22" scale="0" />
+            </key>
+            <one-to-many class="umg.pojos.Checkout" />
+        </set>
+    </class>
+</hibernate-mapping>

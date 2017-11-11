@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	  xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Hotel Reserva</title>
+	<link href="resources/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- Custom Theme files -->
+	<link href="resources/css/style.css" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="resources/css/jquery-ui.css" />
+	<h:outputScript library="js" name="jquery-1.11.1.min.js"/>
+	<h:outputScript library="js" name="bootstrap.js"/>
+	<h:outputScript library="js" name="jquery-ui.js"/>
+	<h:outputScript library="js" name="classie.js"/>
+	<h:outputScript library="js" name="uisearch.js"/>
+</h:head>
+<h:body>
+<!-- banner -->
+	<div class="banner1">
+		<ui:include src="header.xhtml"/>
+	</div>
+		<!-- banner -->
+<!--start-contact-->
+	<div class="reg-form">
+	<div class="container">
+	<div class="reg">
+		<h3>CONTACTO</h3>
+		<p>Bienvenido, por favor ingrese los siguientes detalles para continuar</p>
+		<h:form>
+		<ul>
+			<li class="text-info">NOMBRE</li>
+			<li><h:inputText ></h:inputText>
+			</li>
+		</ul>
+		<ul>
+			<li class="text-info">EMAIL</li>
+			<li><h:inputText ></h:inputText>
+			</li>
+		</ul>
+		<ul>
+			<li class="text-info">NO. TELEFONO</li>
+                        <li><h:inputText ></h:inputText>
+			</li>
+		</ul>
+		<ul>
+			<li class="text-info">MENSAJE</li>
+			<li><h:inputText ></h:inputText>
+			</li>
+		</ul>
+			<h:commandButton type="submit" value="Send" action="#"/>
+		</h:form>
+	</div>
+	</div>
+	</div>
+	<ui:include src="footer.xhtml"/>
+</h:body>
+</html>

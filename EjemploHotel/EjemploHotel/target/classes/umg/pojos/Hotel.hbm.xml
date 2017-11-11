@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 09-nov-2017 21:45:52 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="umg.pojos.Hotel" table="HOTEL" schema="HOTELDBA" optimistic-lock="version">
+        <id name="idhotel" type="big_decimal">
+            <column name="IDHOTEL" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="NOMBRE" length="50" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="DIRECCION" length="50" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="DESCRIPCION" length="100" />
+        </property>
+        <property name="imagen" type="string">
+            <column name="IMAGEN" length="50" />
+        </property>
+        <set name="habitacions" table="HABITACION" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="IDHOTEL" precision="22" scale="0" />
+            </key>
+            <one-to-many class="umg.pojos.Habitacion" />
+        </set>
+    </class>
+</hibernate-mapping>

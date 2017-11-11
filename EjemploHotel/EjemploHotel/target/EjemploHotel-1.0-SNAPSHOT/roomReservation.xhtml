@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Hotel Booking</title>
+    <link href="resources/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <link href="resources/css/style.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="resources/css/jquery-ui.css" />
+    <h:outputScript library="js" name="jquery-1.11.1.min.js"/>
+    <h:outputScript library="js" name="bootstrap.js"/>
+    <h:outputScript library="js" name="jquery-ui.js"/>
+    <h:outputScript library="js" name="classie.js"/>
+    <h:outputScript library="js" name="uisearch.js"/>
+</h:head>
+<h:body>
+    <div class="banner1">
+        <ui:include src="header.xhtml" />
+    </div>
+    <div class="reg-form">
+    <div class="container">
+    <div class="reg">
+    <h3>Reservaciones</h3>
+    <p>Bienvenido, ingrese los datos:</p>
+    <h:form>
+        <ul>
+            <li class="text-info">Tipo Habitacion</li>
+            <li>
+                <select>
+                    <option value="">Seleccione</option>
+                    <option value="a">Doble</option>
+                    <option value="c">Simple</option>
+                    <option value="e">Suit</option>
+                    <option value="g">Guest</option>
+                </select>
+            </li>
+        </ul>
+        <!---strat-date-piker-->
+        <script type="text/javascript" language="JavaScript">
+            $(function() {
+                $( ".datepicker" ).datepicker();
+            });
+        </script>
+        <!---/End-date-piker-->
+        <ul>
+            <li class="text-info">Datos de Reserva</li>
+            <h:inputText ></h:inputText>
+        </ul>
+       
+      
+        <ul>
+            <li class="text-info">Email</li>
+            <li><h:inputText ></h:inputText></li>
+        </ul>
+        <ul>
+            <li class="text-info">No. Telefono</li>
+            <li><h:inputText ></h:inputText></li>
+        </ul>
+        <h:commandButton type="submit" value="Reservar" action="#"/>
+    </h:form>
+    </div>
+    </div>
+    </div>
+    <div class="clearfix"> </div>
+    <ui:include src="footer.xhtml"/>
+</h:body>
+</html>
